@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wolof-Bridge</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Wolof Bridge</h1>
+        
+        <div class="input-section">
+            <label for="query">Bindal sa laaj ci wolof:</label>
+            <textarea id="query" name="query" rows="4" placeholder="Bindal sa laaj fii..."></textarea>
+            <div class="button-container">
+                <button id="submitButton" type="button">Jox xel</button>
+                <div id="spinner" class="spinner"></div>
+            </div>
+        </div>
+
+        <div id="errorMessage" class="error-message"></div>
+
+        <div id="resultsSection" class="results-section">
+            <div class="result-item">
+                <h3>Laajte bu njëkk (Wolof):</h3>
+                <p id="originalQuery" class="result-content"></p>
+            </div>
+            
+            <div class="result-item">
+                <h3>Laajte buñ tekki (Àngle):</h3>
+                <p id="frenchQuery" class="result-content"></p>
+            </div>
+            
+            <div class="result-item">
+                <h3>Tontu (Angale):</h3>
+                <p id="frenchResponse" class="result-content"></p>
+            </div>
+            
+            <div class="result-item">
+                <h3>Tontu bu mujj (wolof):</h3>
+                <p id="wolofResponse" class="result-content"></p>
+            </div>
+        </div>
+    </div>
+
+    <script defer src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
